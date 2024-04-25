@@ -1,13 +1,6 @@
-//your JS code here. If required.
-document.addEventListener('DOMContentLoaded', () => {
-  const counterElement = document.getElementById('counter');
-  const incrementBtn = document.getElementById('incrementBtn');
-
-  let counterValue = 0;
-
-  incrementBtn.addEventListener('click', () => {
-    alert(`Counter value before increment: ${counterValue}`);
-    counterValue++;
-    counterElement.textContent = counterValue;
-  });
-});
+document.getElementById('incrementBtn').onclick = function () {
+  const counterParagraph = document.getElementById('counter');
+  const currentValue = parseInt(counterParagraph.textContent, 10);
+  alert('Un-incremented value: ' + currentValue);
+  counterParagraph.textContent = currentValue + 1;
+};
